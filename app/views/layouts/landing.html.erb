@@ -3,21 +3,20 @@
   <head>
     <title>Clase34</title>
     <%= csrf_meta_tags %>
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
 
-	
-	
-    <%= stylesheet_link_tag    'darkly.min', media: 'all', 'data-turbolinks-track': 'reload' %>    
+
+  
+  
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
   </head>
 
-  <body class="<%=  params[:controller]%> <%=  params[:action]%>">
-  
+  <body>
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -38,7 +37,6 @@
         <li><a href="#">Link</a></li> -->
         <li><a href="<%= pags_pag1_path %>">pagina 1</a></li>
         <li><a href="<%= pags_pag2_path %>">pagina 2</a></li>
-        <li><a href="<%= pags_pag3_path %>">pagina 3</a></li>
         <!--
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -82,10 +80,7 @@
   <h1>Hola mundo!!</h1>
 </div>
     <div class="container">
-    <% @users.each do |x| %>
-    	<%= x %>
-    <% end %>
-    <%= yield %>    
+    <%= yield %>
     </div>
   </body>
 </html>
